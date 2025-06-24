@@ -1,0 +1,212 @@
+[
+  {
+    "date": "2025-06-23",
+    "scheduledHabits": [
+      {
+        "id": 1,
+        "name": "Trene",
+        "timeOfDay": "morning"
+      },
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "timeOfDay": "anytime"
+      },
+      {
+        "id": 4,
+        "name": "Pushups",
+        "timeOfDay": "morning"
+      }
+    ],
+    "completedHabits": [
+      {
+        "id": 1,
+        "name": "Trene",
+        "completedAt": "2025-06-23T08:15:00.000Z",
+        "streak": 3
+      },
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "completedAt": "2025-06-23T20:00:00.000Z",
+        "streak": 5
+      },
+      {
+        "id": 4,
+        "name": "Pushups",
+        "completedAt": "2025-06-23T08:30:00.000Z",
+        "streak": 2
+      }
+    ],
+    "stats": {
+      "completionRate": 100
+    }
+  },
+  {
+    "date": "2025-06-22",
+    "scheduledHabits": [
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "timeOfDay": "anytime"
+      },
+      {
+        "id": 9,
+        "name": "Gå tur",
+        "timeOfDay": "afternoon"
+      },
+      {
+        "id": 7,
+        "name": "Sove",
+        "timeOfDay": "evening"
+      },
+      {
+        "id": 5,
+        "name": "Lese bok",
+        "timeOfDay": "evening"
+      },
+      {
+        "id": 8,
+        "name": "Spise sunt",
+        "timeOfDay": "anytime"
+      }
+    ],
+    "completedHabits": [
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "completedAt": "2025-06-22T19:30:00.000Z",
+        "streak": 4
+      },
+      {
+        "id": 9,
+        "name": "Gå tur",
+        "completedAt": "2025-06-22T16:00:00.000Z",
+        "streak": 2
+      },
+      {
+        "id": 7,
+        "name": "Sove",
+        "completedAt": "2025-06-22T22:30:00.000Z",
+        "streak": 3
+      },
+      {
+        "id": 8,
+        "name": "Spise sunt",
+        "completedAt": "2025-06-22T19:00:00.000Z",
+        "streak": 1
+      }
+    ],
+    "stats": {
+      "completionRate": 80
+    }
+  },
+  {
+    "date": "2025-06-21",
+    "scheduledHabits": [
+      {
+        "id": 1,
+        "name": "Trene",
+        "timeOfDay": "morning"
+      },
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "timeOfDay": "anytime"
+      },
+      {
+        "id": 4,
+        "name": "Pushups",
+        "timeOfDay": "morning"
+      },
+      {
+        "id": 5,
+        "name": "Lese bok",
+        "timeOfDay": "evening"
+      },
+      {
+        "id": 8,
+        "name": "Spise sunt",
+        "timeOfDay": "anytime"
+      }
+    ],
+    "completedHabits": [
+      {
+        "id": 1,
+        "name": "Trene",
+        "completedAt": "2025-06-21T09:00:00.000Z",
+        "streak": 2
+      },
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "completedAt": "2025-06-21T14:00:00.000Z",
+        "streak": 3
+      },
+      {
+        "id": 8,
+        "name": "Spise sunt",
+        "completedAt": "2025-06-21T19:00:00.000Z",
+        "streak": 1
+      }
+    ],
+    "stats": {
+      "completionRate": 60
+    }
+  },
+  {
+    "date": "2025-06-20",
+    "scheduledHabits": [
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "timeOfDay": "anytime"
+      },
+      {
+        "id": 4,
+        "name": "Pushups",
+        "timeOfDay": "morning"
+      },
+      {
+        "id": 5,
+        "name": "Lese bok",
+        "timeOfDay": "evening"
+      }
+    ],
+    "completedHabits": [
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "completedAt": "2025-06-20T21:00:00.000Z",
+        "streak": 2
+      }
+    ],
+    "stats": {
+      "completionRate": 33
+    }
+  },
+  {
+    "date": "2025-06-19",
+    "scheduledHabits": [
+      {
+        "id": 1,
+        "name": "Trene",
+        "timeOfDay": "morning"
+      },
+      {
+        "id": 2,
+        "name": "Drikk vann",
+        "timeOfDay": "anytime"
+      },
+      {
+        "id": 7,
+        "name": "Sove",
+        "timeOfDay": "evening"
+      }
+    ],
+    "completedHabits": [],
+    "stats": {
+      "completionRate": 0
+    }
+  }
+]

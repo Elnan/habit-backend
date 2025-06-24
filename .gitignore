@@ -1,0 +1,18 @@
+# Environment variables
+.env*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Database files
+*.sqlite
+*.sqlite3
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store

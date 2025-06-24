@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "name": "Trene",
+    "description": "Trene 3 ganger i uken",
+    "completed": false,
+    "days": [
+      "mon",
+      "wed",
+      "fri"
+    ],
+    "done": true,
+    "stats": {
+      "totalCompleted": 15,
+      "lastCompletedDate": "2025-06-21T08:00:00.000Z",
+      "streak": 3
+    }
+  },
+  {
+    "id": 2,
+    "name": "Drikk vann",
+    "description": "Drikk 2 liter vann hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "done": false,
+    "stats": {
+      "totalCompleted": 45,
+      "lastCompletedDate": "2025-06-22T20:00:00.000Z",
+      "streak": 7
+    }
+  },
+  {
+    "name": "Vaske/Rydde",
+    "description": "Bruk 15 min på å vaske eller rydde hver dag",
+    "completed": false,
+    "id": 3,
+    "days": [
+      "mon",
+      "wed",
+      "fri"
+    ],
+    "stats": {
+      "totalCompleted": 9,
+      "lastCompletedDate": "2025-06-23T00:02:34.740Z",
+      "streak": 1
+    },
+    "done": true
+  },
+  {
+    "id": 4,
+    "name": "Pushups",
+    "description": "Gjøre 20 pushups hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "stats": {
+      "totalCompleted": 12,
+      "lastCompletedDate": "2025-06-21T06:15:00.000Z",
+      "streak": 2
+    }
+  },
+  {
+    "id": 5,
+    "name": "Lese bok",
+    "description": "Lese 30 minutter hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "stats": {
+      "totalCompleted": 25,
+      "lastCompletedDate": "2025-06-22T22:00:00.000Z",
+      "streak": 4
+    }
+  },
+  {
+    "id": 6,
+    "name": "Meditere",
+    "description": "Mediter 10 minutter hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "wed",
+      "fri"
+    ],
+    "stats": {
+      "totalCompleted": 18,
+      "lastCompletedDate": "2025-06-21T07:00:00.000Z",
+      "streak": 2
+    }
+  },
+  {
+    "id": 7,
+    "name": "Sove",
+    "description": "Sove 8 timer hver natt",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "stats": {
+      "totalCompleted": 50,
+      "lastCompletedDate": "2025-06-22T23:00:00.000Z",
+      "streak": 10
+    }
+  },
+  {
+    "id": 8,
+    "name": "Spise sunt",
+    "description": "Spise minst 5 porsjoner frukt og grønt hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "done": true,
+    "stats": {
+      "totalCompleted": 30,
+      "lastCompletedDate": "2025-06-22T19:00:00.000Z",
+      "streak": 5
+    }
+  },
+  {
+    "id": 9,
+    "name": "Gå tur",
+    "description": "Gå en tur på minst 30 minutter hver dag",
+    "completed": false,
+    "days": [
+      "tue",
+      "thu",
+      "sat",
+      "sun"
+    ],
+    "stats": {
+      "totalCompleted": 15,
+      "lastCompletedDate": "2025-06-22T16:00:00.000Z",
+      "streak": 1
+    }
+  },
+  {
+    "id": 10,
+    "name": "Kode",
+    "description": "Kode i minst 1 time hver dag",
+    "completed": false,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "done": true,
+    "stats": {
+      "totalCompleted": 35,
+      "lastCompletedDate": "2025-06-22T21:00:00.000Z",
+      "streak": 8
+    }
+  },
+  {
+    "name": "Lage middag",
+    "description": "Lage middag hver dag",
+    "completed": false,
+    "id": 11,
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "done": false,
+    "stats": {
+      "totalCompleted": 40,
+      "lastCompletedDate": "2025-06-22T18:00:00.000Z",
+      "streak": 6
+    }
+  },
+  {
+    "name": "Trene styrke",
+    "description": "Følge styrkeprogrammet",
+    "completed": false,
+    "id": 12,
+    "days": [
+      "tue",
+      "thu",
+      "sat"
+    ],
+    "stats": {
+      "totalCompleted": 10,
+      "lastCompletedDate": "2025-06-20T17:00:00.000Z",
+      "streak": 2
+    }
+  }
+]
