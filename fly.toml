@@ -1,7 +1,7 @@
 app = "habit-tracker-api"
 
 [build]
-  builder = "heroku/buildpacks:20"
+  builder = "heroku/buildpacks:22"
 
 [env]
   PORT = "8080"
