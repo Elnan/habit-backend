@@ -1,14 +1,16 @@
-# fly.toml app configuration file generated for habit-tracker-api on 2025-06-24T21:23:53+02:00
+# fly.toml app configuration file generated for habit-api on 2025-06-24T21:23:53+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "habit-tracker-api"
+app = "habit-api"
 primary_region = "arn"
 
 [build]
-  # Remove the incorrect dockerfile setting
-  builder = "heroku/buildpacks:22"
+  dockerfile = "Dockerfile"
+
+[deploy]
+  strategy = "bluegreen"    # Add this section for deployment strategy
 
 [env]
   PORT = "8080"
