@@ -1,7 +1,13 @@
+# fly.toml app configuration file generated for habit-tracker-api on 2025-06-24T21:23:53+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "habit-tracker-api"
 primary_region = "arn"
 
 [build]
+  # Remove the incorrect dockerfile setting
   builder = "heroku/buildpacks:22"
 
 [env]
@@ -14,23 +20,9 @@ primary_region = "arn"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-
-[[services]]
-  protocol = "tcp"
-  internal_port = 8080
   processes = ["app"]
 
-  [[services.ports]]
-    port = 80
-    handlers = ["http"]
-  [[services.ports]]
-    port = 443
-    handlers = ["tls", "http"]
-
 [[vm]]
+  memory = "1gb"
   cpu_kind = "shared"
   cpus = 1
-  memory_mb = 256
-
-[build.args]
-  NODE_VERSION = "18"
