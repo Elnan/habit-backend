@@ -1,4 +1,5 @@
 app = "habit-tracker-api"
+primary_region = "arn"
 
 [build]
   builder = "heroku/buildpacks:22"
@@ -25,3 +26,11 @@ app = "habit-tracker-api"
   [[services.ports]]
     port = 443
     handlers = ["tls", "http"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
+
+[build.args]
+  NODE_VERSION = "18"
