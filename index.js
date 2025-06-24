@@ -9,7 +9,11 @@ const statsRouter = require("./routes/stats");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const allowedOrigins = ["http://localhost:5173", "https://habits.olavelnan.no"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://habits.olavelnan.no",
+  "https://habit-api.fly.dev",
+];
 
 app.use(
   cors({
@@ -25,14 +29,16 @@ app.use(
 );
 app.use(express.json());
 
+// Add a root route to verify API is running
+app.get("/", (req, res) => {
+  res.json({ status: "API is running" });
+});
+
 app.use("/api/habits", habitsRouter);
 app.use("/api/entries", entriesRouter);
 app.use("/api/stats", statsRouter);
 
-app.get("/", (req, res) => {
-  res.send("API er oppe og går!");
-});
-
+// Add error handling
 app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" });
 });
