@@ -1,10 +1,19 @@
-"use strict";
+require("dotenv").config({
+  path:
+    process.env.NODE_ENV === "production"
+      ? ".env.production"
+      : ".env.development",
+});
 
 const express = require("express");
 const cors = require("cors");
 const habitsRouter = require("./routes/habits");
 const entriesRouter = require("./routes/entries");
 const statsRouter = require("./routes/stats");
+const path = require("path");
+
+// Add this line to verify env loading
+console.log("API Key loaded:", process.env.API_KEY ? "Yes" : "No");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
