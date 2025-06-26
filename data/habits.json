@@ -30,7 +30,7 @@
       "sat",
       "sun"
     ],
-    "done": false,
+    "done": true,
     "stats": {
       "totalCompleted": 45,
       "lastCompletedDate": "2025-06-22T20:00:00.000Z",
@@ -129,7 +129,8 @@
       "totalCompleted": 50,
       "lastCompletedDate": "2025-06-22T23:00:00.000Z",
       "streak": 10
-    }
+    },
+    "done": true
   },
   {
     "id": 8,
@@ -165,7 +166,8 @@
       "totalCompleted": 15,
       "lastCompletedDate": "2025-06-22T16:00:00.000Z",
       "streak": 1
-    }
+    },
+    "done": true
   },
   {
     "id": 10,
@@ -200,7 +202,7 @@
       "sat",
       "sun"
     ],
-    "done": false,
+    "done": true,
     "stats": {
       "totalCompleted": 40,
       "lastCompletedDate": "2025-06-22T18:00:00.000Z",
@@ -221,6 +223,7 @@
       "totalCompleted": 10,
       "lastCompletedDate": "2025-06-20T17:00:00.000Z",
       "streak": 2
-    }
+    },
+    "done": true
   }
 ]

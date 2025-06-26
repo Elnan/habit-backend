@@ -155,6 +155,24 @@ router.patch("/:date", async (req, res) => {
   }
 });
 
+// PUT update entry by date
+router.put("/:date", checkAPIKey, (req, res) => {
+  const { date } = req.params;
+  const updatedEntry = req.body;
+
+  const entries = loadFromFile(filePath);
+  const index = entries.findIndex((e) => e.date === date);
+
+  if (index === -1) {
+    entries.push(updatedEntry);
+  } else {
+    entries[index] = updatedEntry;
+  }
+
+  saveToFile(filePath, entries);
+  res.json(updatedEntry);
+});
+
 // DELETE by date
 router.delete("/:date", checkAPIKey, (req, res) => {
   const { date } = req.params;
