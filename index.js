@@ -11,12 +11,13 @@ const habitsRouter = require("./routes/habits");
 const entriesRouter = require("./routes/entries");
 const statsRouter = require("./routes/stats");
 const path = require("path");
+const fs = require("fs");
 
 // Add this line to verify env loading
 console.log("API Key loaded:", process.env.API_KEY ? "Yes" : "No");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const allowedOrigins = [
   "http://localhost:5173",
@@ -38,9 +39,26 @@ app.use(
 );
 app.use(express.json());
 
+// Ensure data directory exists
+const dataDir = path.join(process.cwd(), "data");
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+// Initialize entries.json if it doesn't exist
+const entriesPath = path.join(dataDir, "entries.json");
+if (!fs.existsSync(entriesPath)) {
+  fs.writeFileSync(entriesPath, "[]", "utf8");
+}
+
 // Add a root route to verify API is running
 app.get("/", (req, res) => {
   res.json({ status: "API is running" });
+});
+
+// Add health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
 });
 
 app.use("/api/habits", habitsRouter);
@@ -52,19 +70,34 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" });
 });
 
-const startServer = () => {
+app.get("/api/habits", (req, res) => {
+  console.log(
+    "Loading habits from:",
+    path.join(__dirname, "data", "habits.json")
+  );
+  const habits = loadHabits();
+  console.log("Loaded habits:", habits);
+  res.json(habits);
+});
+
+function loadHabits() {
   try {
-    const server = app.listen(PORT);
+    const habitsPath = path.join(__dirname, "data", "habits.json");
+    console.log("Loading habits from:", habitsPath);
 
-    server.on("error", (err) => {
-      if (err.code === "EADDRINUSE") {
-        process.exit(1);
-      }
-      process.exit(1);
-    });
-  } catch (err) {
-    process.exit(1);
+    if (!fs.existsSync(habitsPath)) {
+      console.error("habits.json does not exist at:", habitsPath);
+      return [];
+    }
+
+    const data = fs.readFileSync(habitsPath, "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    console.error("Error loading habits:", error);
+    return [];
   }
-};
+}
 
-startServer();
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});

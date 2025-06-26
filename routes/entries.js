@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs").promises;
+const path = require("path");
 const { loadFromFile, saveToFile } = require("../utils/fileUtils");
 const checkAPIKey = require("../utils/auth").checkAPIKey;
 
-const filePath = "./data/entries.json";
+const filePath = path.join(process.cwd(), "data", "entries.json");
 
 // GET all entries
 router.get("/", checkAPIKey, (req, res) => {
@@ -155,22 +156,35 @@ router.patch("/:date", async (req, res) => {
   }
 });
 
-// PUT update entry by date
+// Create or update entry
 router.put("/:date", checkAPIKey, (req, res) => {
-  const { date } = req.params;
-  const updatedEntry = req.body;
+  try {
+    const { date } = req.params;
+    const updatedEntry = req.body;
 
-  const entries = loadFromFile(filePath);
-  const index = entries.findIndex((e) => e.date === date);
+    console.log(`Updating entry for date: ${date}`);
+    console.log("Entry data:", updatedEntry);
 
-  if (index === -1) {
-    entries.push(updatedEntry);
-  } else {
-    entries[index] = updatedEntry;
+    const entries = loadFromFile(filePath) || [];
+    const index = entries.findIndex((e) => e.date === date);
+
+    if (index === -1) {
+      entries.push(updatedEntry);
+    } else {
+      entries[index] = updatedEntry;
+    }
+
+    const saved = saveToFile(filePath, entries);
+    if (!saved) {
+      throw new Error("Failed to save entries");
+    }
+
+    console.log("Successfully saved entries");
+    res.json(updatedEntry);
+  } catch (error) {
+    console.error("Error saving entry:", error);
+    res.status(500).json({ error: error.message });
   }
-
-  saveToFile(filePath, entries);
-  res.json(updatedEntry);
 });
 
 // DELETE by date

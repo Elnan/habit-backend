@@ -67,11 +67,11 @@
       "fri"
     ],
     "stats": {
-      "totalCompleted": 13,
-      "lastCompletedDate": "2025-06-24T22:26:22.884Z",
-      "streak": 3
+      "totalCompleted": 12,
+      "lastCompletedDate": null,
+      "streak": 0
     },
-    "done": true
+    "done": false
   },
   {
     "id": 5,
@@ -163,11 +163,11 @@
       "sun"
     ],
     "stats": {
-      "totalCompleted": 15,
-      "lastCompletedDate": "2025-06-22T16:00:00.000Z",
-      "streak": 1
+      "totalCompleted": 14,
+      "lastCompletedDate": null,
+      "streak": 0
     },
-    "done": true
+    "done": false
   },
   {
     "id": 10,
@@ -220,10 +220,10 @@
       "sat"
     ],
     "stats": {
-      "totalCompleted": 10,
-      "lastCompletedDate": "2025-06-20T17:00:00.000Z",
-      "streak": 2
+      "totalCompleted": 9,
+      "lastCompletedDate": null,
+      "streak": 0
     },
-    "done": true
+    "done": false
   }
 ]
